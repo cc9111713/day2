@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,116 @@
     <title>Document</title>
     <script src="js/common/flexible.js"></script>
     <script src="js/common/swiper.js"></script>
+    <script src="js/common/better-scroll.js"></script>
     <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/common/jquery-3.3.1.js"></script>
+    <script src="js/index.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
-        
+            <span>
+                < 返回</span> <span>猫掌柜杂货铺
+            </span>
+            <span>···</span>
         </header>
-        <section></section>
-        <footer></footer>
+        <section>
+            <div class="top">
+                <h3>请选择配送地址</h3>
+            </div>
+            <div class="shop">
+                <dl>
+                    <dt><img src="img/5.jpg" alt=""></dt>
+                    <dd>
+                        <div class="left">
+                            <h3>猫掌柜杂货铺(已打烊)</h3>
+
+                        </div>
+                        <span></span>
+                        <span>点击关注★</span>
+                    </dd>
+                </dl>
+            </div>
+            <div class="swiper-container" id="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/1.gif" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/2.gif" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/3.gif" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="nav">
+                <span>热卖商品</span>
+                <span>店家推荐</span>
+                <span>跳楼促销</span>
+            </div>
+            <div class="slis">
+                <div class="lis">
+                    <dl>
+                        <dt>
+                            <img src="img/4.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p>伯纳乌</p>
+                            <p>￥40.00</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="img/4.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p>伯纳乌</p>
+                            <p>￥40.00</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="img/4.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p>伯纳乌</p>
+                            <p>￥40.00</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="img/4.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <p>伯纳乌</p>
+                            <p>￥40.00</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span>首页</span>
+            <span>购物车</span>
+            <span>我的</span>
+        </footer>
     </div>
 </body>
+<script>
+    var mySwiper = new Swiper('#swiper', {
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination'
+        }
+    })
+
+    var BScroll = new BScroll('.slis', {
+        scrollY: true
+    })
+</script>
+
 </html>
